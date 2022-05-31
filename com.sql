@@ -5,3 +5,15 @@ create table raboanaly.com
   anCom number(10),
   payement number(10),
   foreign key(numCli) references raboanaly.cli(numCli));
+
+desc com;
+
+alter table com rename column ancom to dateCom;
+alter table com modify DATECOM Date;
+
+INSERT INTO raboanaly.com values (1,1,50,TO_DATE('2022','YYYY'),20);
+INSERT INTO raboanaly.com values (2,2,50,TO_DATE('2022','YYYY'),20);
+
+select * from raboanaly.com;
+
+truncate table raboanaly.com;
